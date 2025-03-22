@@ -16,21 +16,24 @@ public class Antrian {
             }
             temp.next = newNode;
         }
+        System.out.println("Berhasil menambahkan antrian!");
         displayQueue();
     }
 
     public void pop() {
         if (head == null) {
-            System.out.println("Antrian Kosong");
+            System.out.println("Tidak ada antrian yang menunggu!");
         } else {
             head = head.next;
+            System.out.println("Berhasil melepas antrian terdepan!");
+            displayQueue();
         }
-        displayQueue();
     }
 
     public void displayQueue() {
+        System.out.print("Antrian saat ini : ");
         if (head == null) {
-            System.out.println("Antrian Kosong");
+            System.out.println("<empty>");
         } else {
             Node temp = head;
             while (temp != null) {

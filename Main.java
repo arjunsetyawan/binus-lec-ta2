@@ -16,6 +16,7 @@ public class Main {
                 System.out.println("2. Lepas antrian pelanggan terdepan (Pop)");
                 System.out.println("3. Tampilkan antrian");
                 System.out.println("4. Exit");
+                System.out.print("Masukkan pilihan: ");
 
                 int action = scanner.nextInt();
                 scanner.nextLine();
@@ -35,9 +36,10 @@ public class Main {
                     case 4 :
                         userExit = true;
                         exit = true;
+                        System.out.println("Anda telah keluar dari Sistem Antrian Pelanggan Rumah Makan!.");
                         break;
                     default :
-                        System.out.println("Pilihan tidak valid.");
+                        System.out.println("Pilihan tidak valid! Silahkan coba lagi.");
                 }
             }
 
